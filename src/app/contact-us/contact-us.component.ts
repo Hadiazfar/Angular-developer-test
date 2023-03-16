@@ -48,6 +48,8 @@ export class ContactUsComponent {
         Resume: '',         
       });
     }
-    this.submitted = false;
+     this.showField = false;
+     this.submitted = false;
+
   }
 }
