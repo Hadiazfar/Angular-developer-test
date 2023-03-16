@@ -1,4 +1,4 @@
-//to install packages
+##to install packages
 npm install
-// start the server
+##start the server
 ng serve -o
