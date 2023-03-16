@@ -17,7 +17,7 @@ import { HeaderComponent } from './header/header.component';
 const appRoutes: Routes = [
   { path: '', component: BusinessComponent },
   { path: 'contact', component: ContactUsComponent },
-  { path: '**', component: BusinessComponent },
+  
 ];
 
 
