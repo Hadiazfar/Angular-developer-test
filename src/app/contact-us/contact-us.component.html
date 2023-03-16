@@ -1,0 +1,50 @@
+<app-header></app-header>
+
+<section class="banner">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="bannertxt">Join Our Team</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="form">
+<div class="container">
+    <div class="row">
+        <div class="col-md-12" >
+            <form [formGroup]="contactForm">
+  <div class="mb-3">
+    <input type="email" class="form-control" placeholder="FirstName"c  formControlName="firstname" [ngClass]="{'is-invalid':submitted && contactForm.controls.firstname.errors}">
+  </div>
+  <div class="mb-3">
+    <input type="text" class="form-control" placeholder="LastName"c id="exampleInputPassword1" formControlName="lastname" [ngClass]="{'is-invalid':submitted && contactForm.controls.lastname.errors}">
+  </div>
+ 
+  <div class="mb-3">
+    <input type="number" class="form-control" placeholder="Contact Number"c id="exampleInputPassword1" formControlName="PhoneNumber" [ngClass]="{'is-invalid':submitted && contactForm.controls.PhoneNumber.errors}">
+  </div>
+
+  <div class="mb-3" *ngIf="showField">
+  <input class="form-control" type="file" id="formFile"  formControlName="Resume" [ngClass]="{'is-invalid':submitted && contactForm.controls.Resume.errors}">
+</div>
+<div style="text-align: right">
+  
+  <button type="submit" class="btn btn-danger" (click)="add('add')">Add Resume </button>&nbsp;&nbsp;
+    <button type="submit" class="btn btn-danger"(click)="add('remove')">Remove Resume</button>
+  <br>  <br> 
+
+  </div>
+    <div style="text-align: center">
+      <button type="submit" class="btn btn-danger" (click)="submit()">Submit</button>
+</div>
+
+</form>
+        </div>
+    </div>
+</div>
+</div>
+<div style="padding-bottom: 250px"> </div>
+<app-footer></app-footer>
+
